@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кінотеатр — афіша та розклад сеансів</title>
+  <!-- Спосіб 2: стилі в елементі <style> у <head> -->
+  <style>
+    h2 { text-transform: uppercase; letter-spacing: .5px; }
+    .footer-links li { margin-bottom: 6px; }
+  </style>
+  <!-- Спосіб 3: окремий файл стилів -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header bg-brown">
+  <div class="container header-inner">
+    <a href="#top" class="logo"><span class="logo-icon">К</span>Кінотеатр</a>
+    <button class="burger" id="burger" aria-label="Меню">&#9776;</button>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="#afisha" class="nav-link active">Афіша</a></li>
+        <li><a href="#schedule" class="nav-link">Розклад</a></li>
+        <li><a href="#soon" class="nav-link">Скоро</a></li>
+        <li><a href="#promo" class="nav-link">Акції</a></li>
+        <li class="has-dropdown">
+          <a href="#about" class="nav-link" id="dropToggle">Про кінотеатр &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#halls">Наші зали</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="btn btn-white">Увійти</a>
+  </div>
+</header>
+
+<main class="container layout" id="top">
+
+  <aside class="sidebar">
+    <div class="side-card bg-blue text-center">
+      <h3>Реклама</h3>
+      <p class="small muted-light">Новини кінотеатру</p>
+    </div>
+    <div class="side-card bg-blue text-center" id="promo">
+      <h3>Акції кінотеатру</h3>
+      <hr class="line">
+      <p class="strong">Студентський квиток</p>
+      <p class="small muted-light">Спеціальні пропозиції на ранкові сеанси</p>
+      <a href="#" class="side-link">Деталі — у касі</a>
+    </div>
+    <div class="side-card bg-blue text-center">
+      <h3>Дитячі ранки</h3>
+      <p class="small muted-light">Щонеділі о 10:00 — мультфільми зі знижкою 30%</p>
+    </div>
+  </aside>
+
+  <section class="content">
+
+    <div class="hero" id="hero">
+      <span class="hero-label">У центрі уваги</span>
+      <button class="hero-btn prev" id="prev" aria-label="Назад">&#10094;</button>
+      <img src="img/Dead_snow_2_poster.jpg" alt="Постер" class="img-poster" id="heroImg">
+      <button class="hero-btn next" id="next" aria-label="Вперед">&#10095;</button>
+      <span class="hero-title" id="heroTitle">Нацисти в снегу · 2013 · 18+</span>
+      <div class="dots" id="dots"></div>
+    </div>
+
+    <!-- Спосіб 1: стиль безпосередньо в елементі -->
+    <div class="section-head">
+      <h2 style="color:#6b3412; font-size:20px; margin:0;">Афіша</h2>
+      <span class="small muted">6 фільмів</span>
+    </div>
+
+    <div class="cards" id="afisha">
+      <article class="card">
+        <img src="img/Dead_snow_2_poster.jpg" alt="Нічний патруль">
+        <h4>Нацисти в снегу</h4>
+        <p class="small muted">Нацисти в снегу · 2013 · 18+</p>
+        <a href="#schedule" class="btn btn-green btn-block">Детальніше</a>
+      </article>
+      <article class="card">
+        <img src="img/Dracula_1992_poster.jpg" alt="Остання станція">
+        <h4>Дракула</h4>
+        <p class="small muted">Дракула · 1992 · 18+</p>
+        <a href="#schedule" class="btn btn-green btn-block">Детальніше</a>
+      </article>
+      <article class="card">
+        <img src="img/Jeepers_Creepers.jpg" alt="Місто сонця">
+        <h4>Джимперс Крипсер</h4>
+        <p class="small muted">Джимперс Крипсер · 1991 · 18+</p>
+        <a href="#schedule" class="btn btn-green btn-block">Детальніше</a>
+      </article>
+      <article class="card">
+        <img src="img/Dead_snow_2_poster.jpg" alt="Тінь у дзеркалі">
+        <h4>Нацисти в снегу</h4>
+        <p class="small muted">Нацисти в снегу · 2013 · 18+</p>
+        <a href="#schedule" class="btn btn-green btn-block">Детальніше</a>
+      </article>
+      <article class="card">
+        <img src="img/Jeepers_Creepers.jpg" alt="Зимова казка">
+        <h4>Джимперс Крипсер</h4>
+        <p class="small muted">Джимперс Крипсер · 1991 · 18+</p>
+        <a href="#schedule" class="btn btn-green btn-block">Детальніше</a>
+      </article>
+      <article class="card">
+        <img src="img/Dracula_1992_poster.jpg" alt="Код Карпат">
+        <h4>Дракула</h4>
+        <p class="small muted">Дракула · 1992 · 18+</p>
+        <a href="#schedule" class="btn btn-green btn-block">Детальніше</a>
+      </article>
+    </div>
+
+    <div class="section-head">
+      <h2 class="title-brown">Розклад сеансів</h2>
+      <span class="small muted">Сьогодні</span>
+    </div>
+
+    <div class="table-wrap" id="schedule">
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Фільм</th><th>Час</th><th>Зал</th><th>Ціна</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="strong">Нічний патруль</td><td>12:00</td><td>Зал 1</td><td>120 грн</td></tr>
+          <tr><td class="strong">Остання станція</td><td>14:30</td><td>Зал 2</td><td>130 грн</td></tr>
+          <tr><td class="strong">Місто сонця</td><td>16:30</td><td>Зал 2</td><td>150 грн</td></tr>
+          <tr><td class="strong">Зимова казка</td><td>17:45</td><td>Зал 3</td><td>110 грн</td></tr>
+          <tr><td class="strong">Код Карпат</td><td>19:00</td><td>Зал 3</td><td>160 грн</td></tr>
+          <tr><td class="strong">Тінь у дзеркалі</td><td>20:00</td><td>Зал 1</td><td>180 грн</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-head" id="about">
+      <h2 class="title-brown">Про кінотеатр</h2>
+    </div>
+    <div class="about-box" id="halls">
+      <p>Наш кінотеатр — це три сучасні зали з цифровим звуком, зручними кріслами та великим екраном. Ми показуємо новинки світового й українського кіно, а також влаштовуємо тематичні ранки та вечори для студентів і сімей.</p>
+      <ul class="about-list">
+        <li>Зал 1 — 120 місць, Dolby Digital</li>
+        <li>Зал 2 — 80 місць, 3D</li>
+        <li>Зал 3 — 50 місць, VIP-дивани</li>
+      </ul>
+      <ol class="about-list">
+        <li>Оберіть фільм в афіші</li>
+        <li>Виберіть зручний сеанс</li>
+        <li>Придбайте квиток у касі</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <aside class="sidebar">
+    <div class="side-card bg-blue text-center">
+      <h3>Реклама</h3>
+      <p class="small muted-light">Новини кінотеатру</p>
+    </div>
+    <div class="side-card bg-blue text-center" id="soon">
+      <h3>Популярні фільми</h3>
+      <img src="img/nichnyi-patrul.svg" alt="Нічний патруль" class="side-poster">
+      <p class="strong">Нічний патруль · 2026</p>
+      <a href="#afisha" class="side-link">Дивіться в кіно</a>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="site-footer bg-brown" id="contacts">
+  <div class="container footer-grid">
+    <div>
+      <h3>Кінотеатр</h3>
+      <p class="small">Тел.: +380 (00) 000-00-00</p>
+      <p class="small">info@cinema.example</p>
+    </div>
+    <div>
+      <h5>Адреса</h5>
+      <p class="small">м. [Місто], вул. [Назва вулиці], 1</p>
+      <p class="tiny">Адреса кінотеатру</p>
+    </div>
+    <div>
+      <h5>Ми в соцмережах</h5>
+      <ul class="footer-links social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Telegram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">© 2026 Кінотеатр. Усі права захищено.</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

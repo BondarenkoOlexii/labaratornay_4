@@ -1,0 +1,171 @@
+/* ===== Базові стилі ===== */
+:root {
+  --brown: #6b3412;
+  --brown-light: #8a4a22;
+  --blue: #1f4e9e;
+  --red: #b5161f;
+  --green: #2a6e3f;
+  --bg: #f0f0f0;
+  --text: #222;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { padding-left: 20px; }
+h1, h2, h3, h4, h5, h6 { margin: 0 0 8px; }
+h3 { font-size: 17px; }
+h4 { font-size: 14px; text-transform: uppercase; margin: 10px 0 2px; }
+h5 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+p { margin: 0 0 8px; }
+
+.container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+
+/* ===== Допоміжні класи (кольори, фон, відступи, розміри) ===== */
+.bg-brown { background: var(--brown); color: #fff; }
+.bg-blue  { background: var(--blue);  color: #fff; }
+.bg-red   { background: var(--red);   color: #fff; }
+.text-center { text-align: center; }
+.strong { font-weight: 700; }
+.small { font-size: 12px; }
+.tiny  { font-size: 11px; opacity: .7; }
+.muted { color: #777; }
+.muted-light { color: #c9d6ee; }
+.title-brown { color: var(--brown); font-size: 20px; margin: 0; }
+
+/* ===== Кнопки ===== */
+.btn {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: .2s;
+}
+.btn-white { background: #fff; color: var(--brown); }
+.btn-white:hover { background: #f3e3d6; }
+.btn-green { background: var(--green); color: #fff; }
+.btn-green:hover { background: #1f5530; }
+.btn-block { display: block; text-align: center; }
+
+/* ===== Шапка ===== */
+.site-header { position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 20px; }
+.logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; }
+.logo-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; background: #fff; color: var(--brown);
+  border-radius: 6px; font-weight: 800;
+}
+.main-nav { flex: 1; display: flex; justify-content: center; }
+.nav-list { list-style: none; display: flex; gap: 8px; margin: 0; padding: 0; }
+.nav-link {
+  display: block; padding: 8px 14px; border-radius: 4px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+}
+.nav-link:hover, .nav-link.active { background: var(--brown-light); }
+.has-dropdown { position: relative; }
+.dropdown {
+  display: none; position: absolute; top: 100%; left: 0; min-width: 160px;
+  background: #fff; list-style: none; margin: 4px 0 0; padding: 6px 0;
+  border-radius: 4px; box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+.dropdown a { display: block; padding: 8px 16px; color: var(--text); font-size: 13px; }
+.dropdown a:hover { background: #f3e3d6; }
+.has-dropdown:hover .dropdown, .has-dropdown.open .dropdown { display: block; }
+.burger { display: none; background: none; border: none; color: #fff; font-size: 26px; cursor: pointer; }
+
+/* ===== Каркас сторінки ===== */
+.layout { display: grid; grid-template-columns: 210px 1fr 210px; gap: 20px; padding-top: 24px; padding-bottom: 30px; align-items: start; }
+.sidebar { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 84px; }
+.side-card { padding: 20px 16px; border-radius: 4px; }
+.side-card h3 { text-transform: uppercase; font-size: 14px; }
+.line { border: none; border-top: 1px solid rgba(255,255,255,.5); width: 50px; margin: 12px auto; }
+.side-link { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.5); }
+.side-link:hover { border-color: #fff; }
+.side-poster { width: 110px; margin: 12px auto; border-radius: 3px; }
+
+/* ===== Слайдер ===== */
+.hero { position: relative; height: 320px; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.hero-label { position: absolute; top: 16px; left: 16px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.hero-title { position: absolute; bottom: 20px; left: 16px; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+.hero-poster { height: 250px; width: auto; border-radius: 3px; box-shadow: 0 8px 24px rgba(0,0,0,.45); transition: opacity .3s; }
+.hero-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 34px; height: 34px; border: none; border-radius: 4px;
+  background: rgba(0,0,0,.3); color: #fff; font-size: 14px; cursor: pointer;
+}
+.hero-btn:hover { background: rgba(0,0,0,.55); }
+.hero-btn.prev { left: 16px; }
+.hero-btn.next { right: 16px; }
+.dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.5); cursor: pointer; }
+.dot.active { background: #fff; width: 18px; border-radius: 4px; }
+
+.img-poster {width: 100%; height: 100%; object-fit:cover;}
+/* ===== Секції ===== */
+.section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 28px 0 12px; }
+
+/* ===== Картки фільмів ===== */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.card { background: #fff; border-radius: 4px; padding-bottom: 14px; text-align: center; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.08); transition: .2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,.18); }
+.card img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; }
+.card .btn { margin: 10px 12px 0; }
+
+/* ===== Таблиця ===== */
+.table-wrap { background: #fff; border-radius: 4px; overflow-x: auto; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.schedule-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.schedule-table th { background: #e3e3e6; text-align: left; padding: 12px 14px; font-size: 12px; }
+.schedule-table td { padding: 12px 14px; border-top: 1px solid #eee; }
+.schedule-table tbody tr:nth-child(even) { background: #f7f7f9; }
+.schedule-table tbody tr:hover { background: #f3e3d6; }
+
+/* ===== Про кінотеатр ===== */
+.about-box { background: #fff; border-radius: 4px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.08); font-size: 14px; }
+.about-list { margin: 10px 0; }
+.about-list li { margin-bottom: 4px; }
+
+/* ===== Підвал ===== */
+.site-footer { padding: 32px 0 16px; }
+.footer-grid { display: grid; grid-template-columns: 1.2fr 1.2fr 1fr; gap: 30px; }
+.footer-links { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; }
+.footer-links a { text-decoration: underline; font-size: 12px; }
+.footer-links a:hover { color: #f3c9a8; }
+.copyright { margin-top: 24px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.2); font-size: 11px; }
+
+/* ===== Адаптивність ===== */
+@media (max-width: 1100px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+  .sidebar .side-card { flex: 1 1 200px; }
+  .content { order: -1; }
+}
+@media (max-width: 760px) {
+  .burger { display: block; }
+  .main-nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--brown); padding: 10px 20px 16px; }
+  .main-nav.open { display: block; }
+  .nav-list { flex-direction: column; }
+  .dropdown { position: static; box-shadow: none; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero { height: 280px; }
+  .hero-poster { height: 200px; }
+}
+@media (max-width: 460px) {
+  .cards { grid-template-columns: 1fr; }
+  .btn-white { display: none; }
+}
+
+
+
