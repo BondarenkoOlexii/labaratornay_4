@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кінотеатр — афіша та розклад сеансів</title>
-  <!-- Спосіб 2: стилі в елементі <style> у <head> -->
+  <link rel="icon" type="image/svg" href="img/cinema-hd-svgrepo-com.svg">
   <style>
     h2 { text-transform: uppercase; letter-spacing: .5px; }
     .footer-links li { margin-bottom: 6px; }
   </style>
-  <!-- Спосіб 3: окремий файл стилів -->
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
 <header class="site-header bg-brown">
   <div class="container header-inner">
-    <a href="#top" class="logo"><span class="logo-icon">К</span>Кінотеатр</a>
+    <a href="#top" class="logo"><span class="logo-icon"><img src="img/logo.svg" alt=""></span>Кінотеатр</a>
     <button class="burger" id="burger" aria-label="Меню">&#9776;</button>
     <nav class="main-nav" id="mainNav">
       <ul class="nav-list">
@@ -27,7 +26,7 @@
         <li class="has-dropdown">
           <a href="#about" class="nav-link" id="dropToggle">Про кінотеатр &#9662;</a>
           <ul class="dropdown">
-            <li><a href="#about">Про нас</a></li>
+            <li><a href="about.html">Про нас</a></li>
             <li><a href="#halls">Наші зали</a></li>
             <li><a href="#contacts">Контакти</a></li>
           </ul>
@@ -61,7 +60,6 @@
   <section class="content">
 
     <div class="hero" id="hero">
-      <span class="hero-label">У центрі уваги</span>
       <button class="hero-btn prev" id="prev" aria-label="Назад">&#10094;</button>
       <img src="img/Dead_snow_2_poster.jpg" alt="Постер" class="img-poster" id="heroImg">
       <button class="hero-btn next" id="next" aria-label="Вперед">&#10095;</button>
@@ -77,9 +75,9 @@
 
     <div class="cards" id="afisha">
       <article class="card">
-        <img src="img/Dead_snow_2_poster.jpg" alt="Нічний патруль">
-        <h4>Нацисти в снегу</h4>
-        <p class="small muted">Нацисти в снегу · 2013 · 18+</p>
+        <img src="img/ima22ges.png" alt="Нічний патруль">
+        <h4>Психо</h4>
+        <p class="small muted">Психо · 1967 · 18+</p>
         <a href="#schedule" class="btn btn-green btn-block">Детальніше</a>
       </article>
       <article class="card">
@@ -173,12 +171,12 @@
   <div class="container footer-grid">
     <div>
       <h3>Кінотеатр</h3>
-      <p class="small">Тел.: +380 (00) 000-00-00</p>
-      <p class="small">info@cinema.example</p>
+      <p class="small">Тел.: +380 (88) 00-555-3535</p>
+      <p class="small">scamers@cinema.com</p>
     </div>
     <div>
       <h5>Адреса</h5>
-      <p class="small">м. [Місто], вул. [Назва вулиці], 1</p>
+      <p class="small">м. Страше, вул. Ужасна, 13</p>
       <p class="tiny">Адреса кінотеатру</p>
     </div>
     <div>
