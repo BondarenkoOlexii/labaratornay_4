@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Дізнайтеся більше про кінотеатр Світ кіно.">
+  <link rel="icon" type="image/svg" href="img/cinema-hd-svgrepo-com.svg">
+  <title>Про нас — Світ кіно</title>
+  <!-- За потреби додай сюди свій favicon: <link rel="icon" href="img/favicon.png"> -->
+  <link rel="stylesheet" href="css/about_style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">С</span><span>Світ кіно</span></a>
+    <button class="burger" id="burger" aria-label="Відкрити меню">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="index.html#afisha" class="nav-link">Афіша</a></li>
+        <li><a href="index.html#schedule" class="nav-link">Розклад</a></li>
+        <li><a href="index.html#soon" class="nav-link">Скоро</a></li>
+        <li class="has-dropdown">
+          <a href="about.html" class="nav-link active" id="dropToggle">Про нас &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="index.html#halls">Наші зали</a></li>
+            <li><a href="about.html#contacts">Контакти</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="index.html#schedule" class="btn header-action">Обрати сеанс</a>
+  </div>
+</header>
+
+<main class="container layout">
+  <aside class="sidebar">
+    <div class="side-card">
+      <h3>Наша ідея</h3>
+      <p>Створювати простір, у якому глядачі можуть відпочити та насолодитися кіно.</p>
+    </div>
+    <div class="side-card">
+      <h3>Для кожного</h3>
+      <p>У програмі — пригоди, комедії, драми, анімація та сімейні фільми.</p>
+    </div>
+  </aside>
+
+  <section class="content">
+    <img src="img/template.png" alt="Постер" class="img-poster" id="heroImg">
+
+    <div class="about-grid">
+      <div class="panel">
+        <span class="eyebrow">Наша історія</span>
+        <h2>Кіно об'єднує</h2>
+        <p>Ми прагнемо зробити перегляд фільмів комфортним і доступним для кожного відвідувача. У нашому кінотеатрі можна знайти як гучні прем'єри, так і стрічки для спокійного сімейного вечора.</p>
+        <p>Наша мета — не просто показувати фільми, а дарувати атмосферу справжнього кіноперегляду.</p>
+      </div>
+      <!-- ФОТО 1: поклади фото в папку img та вкажи його назву в src -->
+      <img class="about-photo" src="img/images.jpg" alt="Інтер'єр кінотеатру">
+    </div>
+
+    <div class="section-head"><h2>Наші переваги</h2></div>
+    <div class="features">
+      <article class="feature">
+        <div class="feature-icon">▣</div>
+        <h3>Сучасні зали</h3>
+        <p>Зручні крісла, великий екран та приємна атмосфера для перегляду.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon">♫</div>
+        <h3>Якісний звук</h3>
+        <p>Звук допомагає повністю зануритися у події на екрані.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon">★</div>
+        <h3>Різноманітна афіша</h3>
+        <p>Фільми різних жанрів для поціновувачів кіно з різними смаками.</p>
+      </article>
+    </div>
+
+    <div class="section-head"><h2>Атмосфера кіно</h2><p>Фотогалерея</p></div>
+    <div class="gallery">
+      <!-- ФОТО 2–4: заміни назви файлів на власні -->
+      <img class="gallery-photo" src="img/unnamed.jpg" alt="Кінозал">
+      <img class="gallery-photo" src="img/unnam5ed.jpg" alt="Крісла в кінозалі">
+      <img class="gallery-photo" src="img/unnameеd.jpg" alt="Перегляд фільму">
+    </div>
+
+    <div class="section-head" id="contacts"><h2>Контакти</h2></div>
+    <div class="contact-grid">
+      <div class="contact-item"><strong>Адреса</strong><span class="muted">м. Страше, вул. Ужасна, 13</span></div>
+      <div class="contact-item"><strong>Телефон</strong><span class="muted">+380 (88) 00-555-3535</span></div>
+      <div class="contact-item"><strong>Графік роботи</strong><span class="muted">Щодня: 03:00–03:05</span></div>
+    </div>
+  </section>
+
+  <aside class="sidebar sidebar-right">
+    <div class="side-card">
+      <h3>Знайди свій фільм</h3>
+      <p>Переглянь актуальну афішу та обери наступний сеанс.</p>
+      <a class="side-link" href="index.html#afisha">Перейти до афіші →</a>
+    </div>
+    <div class="side-card">
+      <h3>До зустрічі в кіно!</h3>
+      <!-- Можна вставити сюди свій SVG-квиток -->
+      <img src="img/logo.svg" alt="Квиток у кіно" class="side-poster">
+    </div>
+  </aside>
+</main>
+
+<footer class="site-footer bg-brown">
+  <div class="container footer-grid">
+    <div>
+      <h3>Кінотеатр</h3>
+      <p class="small">Тел.: +380 (88) 00-555-3535</p>
+      <p class="small">scamers@cinema.com</p>
+    </div>
+    <div>
+      <h5>Адреса</h5>
+      <p class="small">м. Страше, вул. Ужасна, 13</p>
+      <p class="tiny">Адреса кінотеатру</p>
+    </div>
+    <div>
+      <h5>Ми в соцмережах</h5>
+      <ul class="footer-links social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Telegram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">© 2026 Кінотеатр. Усі права захищено.</div>
+</footer>
+
+<script src="js/about_script.js"></script>
+</body>
+</html>
