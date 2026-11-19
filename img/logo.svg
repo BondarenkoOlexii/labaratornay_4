@@ -1,0 +1,41 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="300" height="230"
+     viewBox="0 0 300 230">
+
+  <!-- Основна частина хлопавки -->
+  <rect x="65" y="70"
+        width="170" height="115"
+        rx="12"
+        fill="#9f2029"
+        stroke="#e8bd72"
+        stroke-width="4"/>
+
+  <!-- Верхня частина хлопавки -->
+  <path d="M65 70 L235 70 L250 30
+           Q252 20 240 20 L78 20
+           Q68 20 65 30 Z"
+        fill="#e8bd72"/>
+
+  <!-- Декоративні смуги -->
+  <path d="M85 20 L110 70
+           M130 20 L155 70
+           M175 20 L200 70
+           M220 20 L240 55"
+        stroke="#272124"
+        stroke-width="12"/>
+
+  <!-- Символ відтворення -->
+  <path d="M125 100 L125 155 L175 127.5 Z"
+        fill="#fff0cf"/>
+
+  <!-- Назва кінотеатру -->
+  <text x="150" y="210"
+        fill="#e8bd72"
+        font-size="19"
+        font-weight="bold"
+        text-anchor="middle">
+    СВІТ КІНО
+  </text>
+
+</svg>
